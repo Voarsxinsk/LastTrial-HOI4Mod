@@ -1,0 +1,322 @@
+ideologies = {
+
+	authsoc = {
+	
+		types = {
+			leninism  = {
+			}
+
+			maximalism  = {
+			}
+
+			trotskyism = {
+			}
+
+			national_communism = {
+			}
+
+			marxism = {
+			}
+			
+			monarcho_socialism = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_AUTHSOC_1" # Faction names used by the ai when an ai with this ideology creates a faction
+		}
+		
+		color = { 105 21 21 } # RGB Цвет 
+		
+		rules = { # Правила для идеологии
+			can_declare_war_on_same_ideology = yes #Может ли страна объявлять войну с страной у которой та-же идеология. Необязательно.
+			can_force_government = yes #Страна может изменить идеологию при мирном соглашении. Необходимо написать.
+			can_send_volunteers = yes #Страна может отправлять добровольцев. Необходимо написать.
+			can_puppet = yes #Страна может делать марионеточные нации в мирном соглашении. Необходимо написать.
+			can_lower_tension = no #Страна понижает мировое напряжение при мирном соглашении. Необязательно.
+			can_only_justify_war_on_threat_country = no #Страна может оправдать только нацию, которая создала мировую напряженность/угрозу. Необязательно.
+			can_guarantee_other_ideologies = no #Может давать гарантии странам с другими идеологиями. Не требуется
+		}
+
+                can_host_government_in_exile = yes #Может принять правительство в изгнании
+		
+		war_impact_on_world_tension = 0.1 #Изменяется с -1 на 1. Увеличивает или уменьшает мировое напряжение, созданное этой нацией
+		faction_impact_on_world_tension = 0.1 #Изменяется от -1 до 1. Увеличивает или уменьшает влияние фракции на мировое напряжение
+		
+		modifiers = { # Модификаторы
+			generate_wargoal_tension = 0.1 #Требуемая мировая напряженность, чтобы начать оправдывать войну (от 0 до 1)
+			join_faction_tension = 0.1 #Требуемое мировое напряжение, чтобы присоединиться к фракции (от 0 до 1)
+			lend_lease_tension = 0 #Требуемое напряжение для начала ленд-лиза (от 0 до 1)
+			send_volunteers_tension = 0 #Требуемое напряжение для отправки добровольцев (от 0 до 1)
+			guarantee_tension = 0.45 #Требуемое напряжение, чтобы гарантировать нацию (от 0 до 1)
+			annex_cost_factor = 0.2 # Изменяет стоимость полной аннексии нации в мирном соглашении. 0,5 увеличит стоимость аннексии на 50% (-1 к 1)
+			justify_war_goal_when_in_major_war_time = 0.25 # Изменяет стоимость оправдания войны во время войны. 0,5 уменьшит время на 50% (от 0 до 1)
+			drift_defence_factor = 0.8 #Естественная защита от других идеологии # 0.3 обеспечит 30% защиту от дрейфа (-1 к 1)
+			puppet_cost_factor = -0.25 #Изменяет стоимость марионеточной нации в мирном соглашении (-1 к 1)
+		}
+
+		can_be_boosted = yes #Можете ли вы повысить популярность этой идеологии в другой стране
+		can_collaborate = yes #Может ли коллаборационировать
+		
+		faction_modifiers = { #модификаторы
+			faction_trade_opinion_factor = 0.50 #плюс 50% для торгового мнения
+		}
+		ai_communist = yes # Тип поведения ИИ (democratic, communism, fascism, neutral или создайте новую).
+	}
+	
+	libsoc = {
+	
+		types = {
+			revolutionary_socialism = {
+			}
+
+			anarcho_syndicalism  = {
+			}
+
+			council_communism = {
+			}
+
+			reformism = {
+			}
+
+			left_technocracy = {
+			}
+			
+			euro_communism = {
+			}
+            
+			left_anarchism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
+			
+			luxemburgism = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_LIBSOC_1" # Faction names used by the ai when an ai with this ideology creates a faction
+		}
+		
+		color = { 151 72 66 } # RGB Цвет 
+		
+		rules = { # Правила для идеологии
+			can_declare_war_on_same_ideology = yes #Может ли страна объявлять войну с страной у которой та-же идеология. Необязательно.
+			can_force_government = yes #Страна может изменить идеологию при мирном соглашении. Необходимо написать.
+			can_send_volunteers = yes #Страна может отправлять добровольцев. Необходимо написать.
+			can_puppet = yes #Страна может делать марионеточные нации в мирном соглашении. Необходимо написать.
+			can_lower_tension = yes #Страна понижает мировое напряжение при мирном соглашении. Необязательно.
+			can_only_justify_war_on_threat_country = no #Страна может оправдать только нацию, которая создала мировую напряженность/угрозу. Необязательно.
+			can_guarantee_other_ideologies = yes #Может давать гарантии странам с другими идеологиями. Не требуется
+		}
+
+                can_host_government_in_exile = yes #Может принять правительство в изгнании
+		
+		war_impact_on_world_tension = -0.1 #Изменяется с -1 на 1. Увеличивает или уменьшает мировое напряжение, созданное этой нацией
+		faction_impact_on_world_tension = -0.1 #Изменяется от -1 до 1. Увеличивает или уменьшает влияние фракции на мировое напряжение
+		
+		modifiers = { # Модификаторы
+			generate_wargoal_tension = 0.35 #Требуемая мировая напряженность, чтобы начать оправдывать войну (от 0 до 1)
+			join_faction_tension = 0.25 #Требуемое мировое напряжение, чтобы присоединиться к фракции (от 0 до 1)
+			lend_lease_tension = 0.1 #Требуемое напряжение для начала ленд-лиза (от 0 до 1)
+			send_volunteers_tension = 0.15 #Требуемое напряжение для отправки добровольцев (от 0 до 1)
+			guarantee_tension = 0.5 #Требуемое напряжение, чтобы гарантировать нацию (от 0 до 1)
+			annex_cost_factor = -0.05 # Изменяет стоимость полной аннексии нации в мирном соглашении. 0,5 увеличит стоимость аннексии на 50% (-1 к 1)
+			justify_war_goal_when_in_major_war_time = 0.1 # Изменяет стоимость оправдания войны во время войны. 0,5 уменьшит время на 50% (от 0 до 1)
+			drift_defence_factor = 0 #Естественная защита от других идеологии # 0.3 обеспечит 30% защиту от дрейфа (-1 к 1)
+			puppet_cost_factor = -0.3 #Изменяет стоимость марионеточной нации в мирном соглашении (-1 к 1)
+		}
+
+		can_be_boosted = yes #Можете ли вы повысить популярность этой идеологии в другой стране
+		can_collaborate = yes #Может ли коллаборационировать
+		
+		faction_modifiers = { #модификаторы
+			faction_trade_opinion_factor = 0.65 #плюс 50% для торгового мнения
+		}
+		ai_communist = yes # Тип поведения ИИ (democratic, communist, fascist, neutral или создайте новую).
+	}
+	
+	socdem = {
+	
+		types = {
+			social_democracy = {
+			}
+
+			democratic_socialism  = {
+			}
+
+			social_liberalism = {
+			}
+
+			progressivism = {
+			}
+			
+			market_socialism_ideology = {
+			}
+		}
+		
+		#Ниже еще в разработке
+		dynamic_faction_names = {
+			"FACTION_NAME_SOCDEM_1" # Faction names used by the ai when an ai with this ideology creates a faction
+		}
+		
+		color = { 206 111 121 } # RGB Цвет 
+		
+		rules = { # Правила для идеологии
+			can_declare_war_on_same_ideology = yes #Может ли страна объявлять войну с страной у которой та-же идеология. Необязательно.
+			can_force_government = yes #Страна может изменить идеологию при мирном соглашении. Необходимо написать.
+			can_send_volunteers = yes #Страна может отправлять добровольцев. Необходимо написать.
+			can_puppet = no #Страна может делать марионеточные нации в мирном соглашении. Необходимо написать.
+			can_lower_tension = yes #Страна понижает мировое напряжение при мирном соглашении. Необязательно.
+			can_only_justify_war_on_threat_country = yes #Страна может оправдать только нацию, которая создала мировую напряженность/угрозу. Необязательно.
+			can_guarantee_other_ideologies = yes #Может давать гарантии странам с другими идеологиями. Не требуется
+		}
+
+                can_host_government_in_exile = yes #Может принять правительство в изгнании
+		
+		war_impact_on_world_tension = -0.15 #Изменяется с -1 на 1. Увеличивает или уменьшает мировое напряжение, созданное этой нацией
+		faction_impact_on_world_tension = -0.15 #Изменяется от -1 до 1. Увеличивает или уменьшает влияние фракции на мировое напряжение
+		
+		modifiers = { # Модификаторы
+			generate_wargoal_tension = 0.6 #Требуемая мировая напряженность, чтобы начать оправдывать войну (от 0 до 1)
+			join_faction_tension = 0.45 #Требуемое мировое напряжение, чтобы присоединиться к фракции (от 0 до 1)
+			lend_lease_tension = 0.35 #Требуемое напряжение для начала ленд-лиза (от 0 до 1)
+			send_volunteers_tension = 0.5 #Требуемое напряжение для отправки добровольцев (от 0 до 1)
+			guarantee_tension = 0.55 #Требуемое напряжение, чтобы гарантировать нацию (от 0 до 1)
+			annex_cost_factor = 0.2 # Изменяет стоимость полной аннексии нации в мирном соглашении. 0,5 увеличит стоимость аннексии на 50% (-1 к 1)
+			justify_war_goal_when_in_major_war_time = 0.05 # Изменяет стоимость оправдания войны во время войны. 0,5 уменьшит время на 50% (от 0 до 1)
+			drift_defence_factor = -0.05 #Естественная защита от других идеологии # 0.3 обеспечит 30% защиту от дрейфа (-1 к 1)
+			puppet_cost_factor = 0.1 #Изменяет стоимость марионеточной нации в мирном соглашении (-1 к 1)
+		}
+
+		can_be_boosted = yes #Можете ли вы повысить популярность этой идеологии в другой стране
+		can_collaborate = yes #Может ли коллаборационировать
+		
+		faction_modifiers = { #модификаторы
+			faction_trade_opinion_factor = 0.6 #плюс 50% для торгового мнения
+		}
+		ai_democratic = yes #Тип поведения ИИ (democratic, communism, fascism, neutral или создайте новую).
+	}
+	
+	liberalism = {
+	
+		types = {
+			progressive_liberalism = {
+			}
+
+			classical_liberalism = {
+			}
+
+			libertarianism = {
+			}
+
+			conservative_liberalism = {
+			}
+			
+			economic_liberalism = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_LIBERALISM_1" # Faction names used by the ai when an ai with this ideology creates a faction
+		}
+		
+		color = { 221 215 102 } # RGB Цвет 
+		
+		rules = { # Правила для идеологии
+			can_declare_war_on_same_ideology = no #Может ли страна объявлять войну с страной у которой та-же идеология. Необязательно.
+			can_force_government = yes #Страна может изменить идеологию при мирном соглашении. Необходимо написать.
+			can_send_volunteers = yes #Страна может отправлять добровольцев. Необходимо написать.
+			can_puppet = no #Страна может делать марионеточные нации в мирном соглашении. Необходимо написать.
+			can_lower_tension = yes #Страна понижает мировое напряжение при мирном соглашении. Необязательно.
+			can_only_justify_war_on_threat_country = yes #Страна может оправдать только нацию, которая создала мировую напряженность/угрозу. Необязательно.
+			can_guarantee_other_ideologies = yes #Может давать гарантии странам с другими идеологиями. Не требуется
+		}
+
+                can_host_government_in_exile = yes #Может принять правительство в изгнании
+		
+		war_impact_on_world_tension = -0.2 #Изменяется с -1 на 1. Увеличивает или уменьшает мировое напряжение, созданное этой нацией
+		faction_impact_on_world_tension = -0.2 #Изменяется от -1 до 1. Увеличивает или уменьшает влияние фракции на мировое напряжение
+		
+		modifiers = { # Модификаторы
+			generate_wargoal_tension = 0.7 #Требуемая мировая напряженность, чтобы начать оправдывать войну (от 0 до 1)
+			join_faction_tension = 0.5 #Требуемое мировое напряжение, чтобы присоединиться к фракции (от 0 до 1)
+			lend_lease_tension = 0.4 #Требуемое напряжение для начала ленд-лиза (от 0 до 1)
+			send_volunteers_tension = 0.6 #Требуемое напряжение для отправки добровольцев (от 0 до 1)
+			guarantee_tension = 0.6 #Требуемое напряжение, чтобы гарантировать нацию (от 0 до 1)
+			annex_cost_factor = 0.4 # Изменяет стоимость полной аннексии нации в мирном соглашении. 0,5 увеличит стоимость аннексии на 50% (-1 к 1)
+			justify_war_goal_when_in_major_war_time = 0 # Изменяет стоимость оправдания войны во время войны. 0,5 уменьшит время на 50% (от 0 до 1)
+			drift_defence_factor = -0.1 #Естественная защита от других идеологии # 0.3 обеспечит 30% защиту от дрейфа (-1 к 1)
+			puppet_cost_factor = 0.2 #Изменяет стоимость марионеточной нации в мирном соглашении (-1 к 1)
+		}
+
+		can_be_boosted = yes #Можете ли вы повысить популярность этой идеологии в другой стране
+		can_collaborate = yes #Может ли коллаборационировать
+		
+		faction_modifiers = { #модификаторы
+			faction_trade_opinion_factor = 0.7 #плюс xx% для торгового мнения
+		}
+		ai_democratic = yes #Тип поведения ИИ (democratic, communist, fascist, neutral или создайте новую).
+	}
+	
+	conservatism = {
+	
+		types = {
+			conservatism_ideology = {
+			}
+
+			national_conservatism = {
+			}
+
+			conservative_centrism = {
+			}
+
+			liberal_conservatism = {
+			}
+			
+			social_conservatism = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_CONSERVATISM_1" # Faction names used by the ai when an ai with this ideology creates a faction
+		}
+		#Ниже не сделано
+		color = { 221 215 102 } # RGB Цвет 
+		
+		rules = { # Правила для идеологии
+			can_declare_war_on_same_ideology = no #Может ли страна объявлять войну с страной у которой та-же идеология. Необязательно.
+			can_force_government = yes #Страна может изменить идеологию при мирном соглашении. Необходимо написать.
+			can_send_volunteers = yes #Страна может отправлять добровольцев. Необходимо написать.
+			can_puppet = no #Страна может делать марионеточные нации в мирном соглашении. Необходимо написать.
+			can_lower_tension = yes #Страна понижает мировое напряжение при мирном соглашении. Необязательно.
+			can_only_justify_war_on_threat_country = yes #Страна может оправдать только нацию, которая создала мировую напряженность/угрозу. Необязательно.
+			can_guarantee_other_ideologies = yes #Может давать гарантии странам с другими идеологиями. Не требуется
+		}
+
+                can_host_government_in_exile = yes #Может принять правительство в изгнании
+		
+		war_impact_on_world_tension = -0.2 #Изменяется с -1 на 1. Увеличивает или уменьшает мировое напряжение, созданное этой нацией
+		faction_impact_on_world_tension = -0.2 #Изменяется от -1 до 1. Увеличивает или уменьшает влияние фракции на мировое напряжение
+		
+		modifiers = { # Модификаторы
+			generate_wargoal_tension = 0.7 #Требуемая мировая напряженность, чтобы начать оправдывать войну (от 0 до 1)
+			join_faction_tension = 0.5 #Требуемое мировое напряжение, чтобы присоединиться к фракции (от 0 до 1)
+			lend_lease_tension = 0.4 #Требуемое напряжение для начала ленд-лиза (от 0 до 1)
+			send_volunteers_tension = 0.6 #Требуемое напряжение для отправки добровольцев (от 0 до 1)
+			guarantee_tension = 0.6 #Требуемое напряжение, чтобы гарантировать нацию (от 0 до 1)
+			annex_cost_factor = 0.4 # Изменяет стоимость полной аннексии нации в мирном соглашении. 0,5 увеличит стоимость аннексии на 50% (-1 к 1)
+			justify_war_goal_when_in_major_war_time = 0 # Изменяет стоимость оправдания войны во время войны. 0,5 уменьшит время на 50% (от 0 до 1)
+			drift_defence_factor = -0.1 #Естественная защита от других идеологии # 0.3 обеспечит 30% защиту от дрейфа (-1 к 1)
+			puppet_cost_factor = 0.2 #Изменяет стоимость марионеточной нации в мирном соглашении (-1 к 1)
+		}
+
+		can_be_boosted = yes #Можете ли вы повысить популярность этой идеологии в другой стране
+		can_collaborate = yes #Может ли коллаборационировать
+		
+		faction_modifiers = { #модификаторы
+			faction_trade_opinion_factor = 0.7 #плюс xx% для торгового мнения
+		}
+		ai_democratic = yes #Тип поведения ИИ (democratic, communist, fascist, neutral или создайте новую).
+	}
+}
+
